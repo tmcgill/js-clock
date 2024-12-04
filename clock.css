@@ -1,0 +1,21 @@
+html {
+	background-color: #000;
+	color: #fff;
+	font-family: Helvetica, sans-serif;
+	font-weight: 600;
+}
+body {
+	display: flex;
+		align-items: center;
+		justify-content: center;
+	height: 100vh;
+	margin: 0;
+}
+#time {
+	font-size: 30vw;
+}
+#time .delim {
+	display: inline-block;
+	font-weight: 400;
+	transform: translateY(-.1em);
+}
