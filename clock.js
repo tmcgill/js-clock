@@ -1,3 +1,6 @@
+var time = document.getElementById('time'),
+	date = document.getElementById('date');
+
 function startTime() {
 	// use var here for legacy OS support
 	var today = new Date(),
@@ -9,7 +12,8 @@ function startTime() {
 	if (minutes < 10) {
 		minutes = '0' + minutes;
 	}
-	document.getElementById('time').innerHTML = hours + '<span class="delim">:</span>' + minutes;
+	time.innerHTML = hours + '<span class="delim">:</span>' + minutes;
+	date.innerHTML = today.toLocaleDateString(undefined, {"weekday":"long", "month":"long", "day":"numeric"});
 	t = setTimeout(function() {
 		startTime()
 	}, 500);
