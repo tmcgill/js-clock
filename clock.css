@@ -13,6 +13,7 @@ body {
 
 #time {
 	font-size: 30vw;
+	line-height: 1;
 }
 #time .delim {
 	display: inline-block;
