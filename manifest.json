@@ -2,7 +2,7 @@
 	"name" : "JS Clock",
 	"short_name" : "JSC",
 	"start_url" : "/js-clock",
-	"display" : "fullscreen",
+	"display" : "standalone",
 	"theme_color" : "#000",
 	"background_color" : "#000",
 	"icons" : [
