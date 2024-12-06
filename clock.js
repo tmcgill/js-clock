@@ -1,5 +1,28 @@
 var time = document.getElementById('time'),
-	date = document.getElementById('date');
+	date = document.getElementById('date'),
+	months = [
+		'January',
+		'February',
+		'March',
+		'April',
+		'May',
+		'June',
+		'July',
+		'August',
+		'September',
+		'Octoboer',
+		'November',
+		'December'
+	],
+	days = [
+		'Sunday',
+		'Monday',
+		'Tuesday',
+		'Wednesday',
+		'Thursday',
+		'Friday',
+		'Saturday'
+	];
 
 function startTime() {
 	// use var here for legacy OS support
@@ -13,7 +36,9 @@ function startTime() {
 		minutes = '0' + minutes;
 	}
 	time.innerHTML = hours + '<span class="delim">:</span>' + minutes;
-	date.innerHTML = today.toLocaleDateString(undefined, {"weekday":"long", "month":"long", "day":"numeric"});
+	// Don't use toLocaleDateString because output varies across agents 
+	// date.innerHTML = today.toLocaleDateString(undefined, {"weekday":"long", "month":"long", "day":"numeric"});
+	date.innerHTML = days[today.getDay()] + ', ' + months[today.getMonth()] + ' ' + today.getDate();
 	t = setTimeout(function() {
 		startTime()
 	}, 500);
