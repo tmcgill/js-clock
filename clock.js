@@ -10,7 +10,7 @@ var time = document.getElementById('time'),
 		'July',
 		'August',
 		'September',
-		'Octoboer',
+		'October',
 		'November',
 		'December'
 	],
