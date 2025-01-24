@@ -29,6 +29,9 @@ function startTime() {
 	var today = new Date(),
 		hours = today.getHours(),
 		minutes = today.getMinutes();
+	if (hours === 0) {
+		hours = 12;
+	}
 	if (hours > 12) {
 		hours = hours-12;
 	}
